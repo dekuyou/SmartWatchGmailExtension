@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Title of preference activity -->
+    <!-- Configuration text shown in preferences -->
+    <!-- Extension name, shown in preferences -->
+    <!-- Name of source, shown in preferences -->
+    <!-- Action Toast, shown on accessory -->
+    <string name="action_event_1">本文の通知も必要ですか？</string>
+    <!-- Text that is read before the display name on accessories that supports text to speech -->
+    <string name="preference_option_clear">全てのイベントを削除</string>
+    <string name="preference_option_clear_txt">&quot;Gmail Notifier の通知イベントを全て削除します。 よろしいですか?&quot;</string>
+    <string name="clear_success">全てのイベントを削除しました。</string>
+    <string name="clear_failure">イベントの削除に失敗しました</string>
+
+
+    <string name="ConfirmTitle">more Notification?</string>
+    <string name="ConfirmMessage">もし Gmail Notifier 2 であれば 本文のサマリーも通知されます。Gmail Notifier 2 を Play ストアで開きますか？</string>
+    <string name="ConfirmYes">はい</string>
+    <string name="ConfirmNo">いいえ</string>
+    <string name="subject">件名</string>
+    <string name="preference_option_summary">本文サマリの通知</string>
+    <string name="preference_option_hide_from">Fromメールアドレスを非表示</string>
+</resources>

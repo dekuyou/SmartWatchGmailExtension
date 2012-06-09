@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gmail Notifier Extension</string>
+    <!-- Title of preference activity -->
+    <string name="preference_activity_title">Gmail Notifier Settings</string>
+    <!-- Configuration text shown in preferences -->
+    <string name="configuration_text">Gmail Notifier settings</string>
+    <!-- Extension name, shown in preferences -->
+    <string name="extension_name">Gmail Notifier</string>
+    <!-- Name of source, shown in preferences -->
+    <string name="source_name">Gmail Notifier source</string>
+    <!-- Action Toast, shown on accessory -->
+    <string name="action_event_1">show info in toast</string>
+    <!-- Text that is read before the display name on accessories that supports text to speech -->
+    <string name="preference_option_clear">Clear All Events</string>
+    <string name="preference_option_clear_txt">&quot;All Gmail Notifier events on device will be cleared, continue?&quot;</string>
+    <string name="preference_key_clear">preference_key_clear</string>
+    <string name="working">Working...</string>
+    <string name="clear_success">All events have been deleted</string>
+    <string name="clear_failure">Failed to delete events</string>
+
+
+    <string name="ConfirmTitle">more Notification.</string>
+    <string name="ConfirmMessage">If Gmail Notifier 2 is a summary of the notified body.</string>
+    <string name="ConfirmYes">Yes</string>
+    <string name="ConfirmNo">No</string>
+    <string name="subject">subject</string>
+    <string name="text_to_speech">New Gmail Notifier event from</string>
+    <string name="preference_option_summary">Summary Notification</string>
+    <string name="preference_option_hide_from">Hide From EMailAddress</string>
+</resources>

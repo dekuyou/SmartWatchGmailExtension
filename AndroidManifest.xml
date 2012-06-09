@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.ddo.dekuyou.liveware.extension.gmail" android:versionCode="17" android:versionName="0.3">
+	<uses-sdk android:minSdkVersion="7" />
+	<uses-permission
+		android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION"></uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+	<application android:label="@string/app_name" android:icon="@drawable/gmailliveview" android:debuggable="false">
+ 
+
+		<activity android:name="jp.ddo.dekuyou.liveware.extension.gmail.GmailPreferenceActivity"
+			android:label="@string/preference_activity_title">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+		</activity>
+
+		<service android:name="jp.ddo.dekuyou.liveware.extension.gmail.GmailExtensionService" />
+
+		<receiver android:name="jp.ddo.dekuyou.liveware.extension.gmail.ExtensionReceiver">
+			<intent-filter>
+				<!-- Generic extension intents. -->
+				<action
+					android:name="com.sonyericsson.extras.liveware.aef.registration.EXTENSION_REGISTER_REQUEST" />
+				<action
+					android:name="com.sonyericsson.extras.liveware.aef.registration.ACCESSORY_CONNECTION" />
+				<action android:name="android.intent.action.LOCALE_CHANGED" />
+
+				<!-- Notification intents -->
+				<action
+					android:name="com.sonyericsson.extras.liveware.aef.notification.VIEW_EVENT_DETAIL" />
+				<action
+					android:name="com.sonyericsson.extras.liveware.aef.notification.REFRESH_REQUEST" />
+
+				<!-- Widget intents -->
+				<action
+					android:name="com.sonyericsson.extras.aef.widget.START_REFRESH_IMAGE_REQUEST" />
+				<action
+					android:name="com.sonyericsson.extras.aef.widget.STOP_REFRESH_IMAGE_REQUEST" />
+				<action android:name="com.sonyericsson.extras.aef.widget.ONTOUCH" />
+				<action
+					android:name="com.sonyericsson.extras.liveware.extension.util.widget.scheduled.refresh" />
+
+				<!-- Control intents -->
+				<action android:name="com.sonyericsson.extras.aef.control.START" />
+				<action android:name="com.sonyericsson.extras.aef.control.STOP" />
+				<action android:name="com.sonyericsson.extras.aef.control.PAUSE" />
+				<action android:name="com.sonyericsson.extras.aef.control.RESUME" />
+				<action android:name="com.sonyericsson.extras.aef.control.ERROR" />
+				<action android:name="com.sonyericsson.extras.aef.control.KEY_EVENT" />
+				<action android:name="com.sonyericsson.extras.aef.control.TOUCH_EVENT" />
+				<action android:name="com.sonyericsson.extras.aef.control.SWIPE_EVENT" />
+
+			</intent-filter>
+		</receiver>
+		
+		<receiver android:name=".GmailReceiver" android:label="receiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+                <data android:scheme="content"
+                    android:host="gmail-ls"
+                    android:pathPrefix="/unread/^i"
+                />
+            </intent-filter>              
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+                <data android:scheme="content"
+                    android:host="gmail-ls"
+                    android:pathPrefix="/unread/^i"
+                    android:mimeType="*/*"
+                />
+            </intent-filter>                      
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+                <data android:scheme="content" android:host="gmail-ls"
+                    android:path="/unread/^iim" />
+            </intent-filter>  
+        </receiver>
+        <receiver
+            android:name=".LiveViewSaverReceiver"
+            android:enabled="true">
+            <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+        </receiver>
+        
+        <activity android:name="jp.ddo.dekuyou.android.util.PaydVersionConfirm"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  >
+        </activity>
+
+	</application>
+</manifest>
