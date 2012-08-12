@@ -128,7 +128,7 @@ public class GmailRegistrationInformation extends RegistrationInformation {
         String iconSource2 = ExtensionUtils.getUriString(mContext,
                 R.drawable.icon18);
         String iconBw = ExtensionUtils.getUriString(mContext,
-                R.drawable.icon18);
+                R.drawable.icon18bg);
         String actionEvent1 = mContext.getString(R.string.action_event_1);
         String textToSpeech = mContext.getString(R.string.text_to_speech);
 

@@ -5,7 +5,7 @@
     <!-- Extension name, shown in preferences -->
     <!-- Name of source, shown in preferences -->
     <!-- Action Toast, shown on accessory -->
-    <string name="action_event_1">本文の通知も必要ですか？</string>
+    <string name="action_event_1">より多くの本文通知が必要ですか？</string>
     <!-- Text that is read before the display name on accessories that supports text to speech -->
     <string name="preference_option_clear">全てのイベントを削除</string>
     <string name="preference_option_clear_txt">&quot;Gmail Notifier の通知イベントを全て削除します。 よろしいですか?&quot;</string>
@@ -14,10 +14,10 @@
 
 
     <string name="ConfirmTitle">more Notification?</string>
-    <string name="ConfirmMessage">もし Gmail Notifier 2 であれば 本文のサマリーも通知されます。Gmail Notifier 2 を Play ストアで開きますか？</string>
+    <string name="ConfirmMessage">もし Gmail Notifier 2 であれば 本文がもっと通知されます。Gmail Notifier 2 を Play ストアで開きますか？</string>
     <string name="ConfirmYes">はい</string>
     <string name="ConfirmNo">いいえ</string>
     <string name="subject">件名</string>
-    <string name="preference_option_summary">本文サマリの通知</string>
+    <string name="preference_option_summary">より多くの本文を通知</string>
     <string name="preference_option_hide_from">Fromメールアドレスを非表示</string>
 </resources>

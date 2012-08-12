@@ -330,7 +330,7 @@ public class GmailExtensionService extends ExtensionService {
 						.getDefaultSharedPreferences(this);
 
 				StringBuilder sbf = new StringBuilder();
-				sbf.append((gfs.getName() == null ? "" : gfs.getName()));
+				sbf.append((gfs.getName() == null ? gfs.getEmail() : gfs.getName()));
 				
 				 if ( gfs.getName() != null && !appprefs.getBoolean("hide_from", false)) {
 						sbf.append((gfs.getEmail() == null ? "" : "<" + gfs.getEmail()
@@ -344,11 +344,7 @@ public class GmailExtensionService extends ExtensionService {
 						+ "\n");
 
 				StringBuilder sbb = new StringBuilder();
-
-				// if (mSharedPreferences.getBoolean("show_summary", false)) {
-				// sbb.append((gfs.getSummary() == null ? "" : gfs
-				// .getSummary()));
-				// }
+				sbb.append((gfs.getSummary() == null ? "" : gfs.getSummary()));
 				sbb.append("\nto:" + account + "\nGmail Received. unread:" + unreadcount);
 
 				sendAnnounce(sbf.toString(), gfs.getEmail(), sbs.toString(), sbb.toString());
