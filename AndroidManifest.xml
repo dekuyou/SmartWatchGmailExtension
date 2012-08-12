@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="jp.ddo.dekuyou.liveware.extension.gmail" android:versionCode="21" android:versionName="0.5.3">
+	package="jp.ddo.dekuyou.liveware.extension.gmail" android:versionCode="22" android:versionName="0.5.4">
 	<uses-sdk android:minSdkVersion="7" />
 	<uses-permission
 		android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION"></uses-permission>
