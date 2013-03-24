@@ -18,10 +18,15 @@ public class GmailReceiver extends BroadcastReceiver {
 		Bundle extras = intent.getExtras();
 		
 		
-		// 
-		intent = new Intent(context, GmailExtensionService.class);
-		intent.putExtras(extras);
-		context.startService(intent);
+		if (extras != null && extras.getString("account") != null) {
+			//
+			intent = new Intent(context, GmailExtensionService.class);
+			intent.putExtras(extras);
+			context.startService(intent);
+
+		} else {
+			Log.d("extras == null or extras.getString('account') == null");
+		}
 		
 		
 //		if (extras != null) {

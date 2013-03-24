@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="jp.ddo.dekuyou.liveware.extension.gmail" android:versionCode="22" android:versionName="0.5.4">
+	package="jp.ddo.dekuyou.liveware.extension.gmail" android:versionCode="24" android:versionName="0.6">
 	<uses-sdk android:minSdkVersion="7" />
 	<uses-permission
 		android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION"></uses-permission>
@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     
-	<application android:label="@string/app_name" android:icon="@drawable/gmailliveview" android:debuggable="false">
+	<application android:label="@string/app_name" android:icon="@drawable/gmailliveview">
  
 
 		<activity android:name="jp.ddo.dekuyou.liveware.extension.gmail.GmailPreferenceActivity"
@@ -65,21 +65,22 @@
                 <data android:scheme="content"
                     android:host="gmail-ls"
                     android:pathPrefix="/unread/^i"
+                    android:mimeType="*/*"
                 />
-            </intent-filter>              
+            </intent-filter>                      
+
             <intent-filter>
                 <action android:name="android.intent.action.PROVIDER_CHANGED" />
                 <data android:scheme="content"
                     android:host="gmail-ls"
-                    android:pathPrefix="/unread/^i"
-                    android:mimeType="*/*"
+                    android:pathPattern="/unread/.*"
                 />
-            </intent-filter>                      
+            </intent-filter>
+ 
             <intent-filter>
-                <action android:name="android.intent.action.PROVIDER_CHANGED" />
-                <data android:scheme="content" android:host="gmail-ls"
-                    android:path="/unread/^iim" />
-            </intent-filter>  
+               <action android:name="com.android.mail.action.update_notification" />
+               <data android:mimeType="application/gmail-ls" />
+            </intent-filter>          
         </receiver>
         <receiver
             android:name=".LiveViewSaverReceiver"
