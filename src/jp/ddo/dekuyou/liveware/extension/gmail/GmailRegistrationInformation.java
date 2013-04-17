@@ -31,17 +31,16 @@
 
 package jp.ddo.dekuyou.liveware.extension.gmail;
 
-import com.sonyericsson.extras.liveware.aef.notification.Notification;
-import com.sonyericsson.extras.liveware.aef.registration.Registration;
-import com.sonyericsson.extras.liveware.extension.util.ExtensionUtils;
-import com.sonyericsson.extras.liveware.extension.util.registration.RegistrationInformation;
-import com.sonyericsson.extras.liveware.sdk.R;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.content.ContentValues;
 import android.content.Context;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.sonyericsson.extras.liveware.aef.notification.Notification;
+import com.sonyericsson.extras.liveware.aef.registration.Registration;
+import com.sonyericsson.extras.liveware.extension.util.ExtensionUtils;
+import com.sonyericsson.extras.liveware.extension.util.registration.RegistrationInformation;
 
 
 public class GmailRegistrationInformation extends RegistrationInformation {
